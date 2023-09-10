@@ -1,0 +1,24 @@
+import { React } from "react";
+import { Link } from "react-router-dom";
+
+import './YearSelector.scss';
+
+export const YearSelector = ({ teamName }) => {
+  let years = [];
+  const startYear = 2008;
+  const endYear = 2020;
+
+  for (let i = startYear; i <= endYear; i++) {
+    years.push(i);
+  }
+
+  return (
+    <ol className="YearSelector">
+      {years.map((year) => (
+        <Link to={`/team/${teamName}/match/${year}`}>
+          <li>{year}</li>
+        </Link>
+      ))}
+    </ol>
+  );
+};
