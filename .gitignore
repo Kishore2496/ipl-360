@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### React App ###
+src/react-ui/node_modules/
